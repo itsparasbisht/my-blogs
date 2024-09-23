@@ -16,7 +16,7 @@ export default async function Blog({ params }: { params: { title: string } }) {
   const title = decodeURIComponent(params.title);
   const id = title.split("-")[0];
 
-  let { data: blog, error } = await supabase
+  const { data: blog, error } = await supabase
     .from("blogs")
     .select("title, body, created_at")
     .eq("id", id);

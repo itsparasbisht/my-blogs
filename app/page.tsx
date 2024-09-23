@@ -9,7 +9,7 @@ const merriweather = Merriweather({
 });
 
 export default async function Home() {
-  let { data: blogs, error } = await supabase
+  const { data: blogs, error } = await supabase
     .from("blogs")
     .select("id, title, created_at, teaser");
 
