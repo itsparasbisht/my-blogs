@@ -25,9 +25,11 @@ export default function RootLayout({
         className={`${montserrat.className} bg-[#212121] max-w-[720px] m-auto px-5`}
       >
         <nav className="py-10 text-gray-200 flex justify-between items-center">
-          <h2 className="text-3xl font-bold">
-            Blogs <span className="text-lg font-medium">by Paras</span>
-          </h2>
+          <Link href="/">
+            <h2 className="text-3xl font-bold">
+              Blogs <span className="text-lg font-medium">by Paras</span>
+            </h2>
+          </Link>
           <Link href="https://www.linkedin.com/in/paras-bisht" target="_blank">
             <Image
               src="/profile.jpg"
