@@ -22,7 +22,9 @@ export default async function Home() {
       {blogs?.map((blog) => (
         <Link
           key={blog.title}
-          href={`/${blog.title.toLowerCase().split(" ").join("-")}/${blog.id}`}
+          href={`/${blog.id}-${encodeURIComponent(
+            blog.title.toLowerCase().split(" ").join("-")
+          )}`}
         >
           <div className="text-[#D88B4E] mb-14 cursor-pointer">
             <h1 className="text-2xl font-bold">{blog.title}</h1>
