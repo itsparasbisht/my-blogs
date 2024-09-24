@@ -18,7 +18,7 @@ export default async function Home() {
   }
 
   return (
-    <main>
+    <main className="pb-12">
       {blogs?.map((blog) => (
         <Link
           key={blog.title}
@@ -26,7 +26,7 @@ export default async function Home() {
             blog.title.toLowerCase().split(" ").join("-")
           )}`}
         >
-          <div className="text-[#D88B4E] mb-14 cursor-pointer">
+          <div className="text-[#D88B4E] py-8 cursor-pointer border-b-[1px] border-[#2a2a2a] hover:border-[#d88c4eea] transition-colors delay-75 ease-out">
             <h1 className="text-2xl font-bold">{blog.title}</h1>
             <p className={`${merriweather.className} text-gray-400 text-base`}>
               {formatDate(blog.created_at)}

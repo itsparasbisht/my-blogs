@@ -6,6 +6,20 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import rehypeSanitize from "rehype-sanitize";
+import { Metadata } from "next";
+
+type Props = {
+  params: { title: string };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  let title = decodeURIComponent(params.title);
+  title = title.split("-").splice(1).join(" ");
+
+  return {
+    title: `${title} - Blogs by Paras`,
+  };
+}
 
 const merriweather = Merriweather({
   weight: ["300", "400", "700", "900"],
