@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "Blogs by Paras",
     images: [
       {
-        url: "https://i.ibb.co/M70BVGn/blogs-by-paras.png",
+        url: "https://i.ibb.co/ZLnPzNG/blogs-by-paras.jpg",
       },
     ],
   },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
       "I share insights on topics I find interesting and hope they’ll be useful to you too.",
     images: [
       {
-        url: "https://i.ibb.co/M70BVGn/blogs-by-paras.png",
+        url: "https://i.ibb.co/ZLnPzNG/blogs-by-paras.jpg",
       },
     ],
   },
