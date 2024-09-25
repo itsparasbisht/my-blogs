@@ -11,7 +11,8 @@ const merriweather = Merriweather({
 export default async function Home() {
   const { data: blogs, error } = await supabase
     .from("blogs")
-    .select("id, title, created_at, teaser");
+    .select("id, title, created_at, teaser")
+    .limit(100);
 
   if (error) {
     console.log(error);
