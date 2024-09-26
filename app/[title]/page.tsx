@@ -63,7 +63,7 @@ export default async function Blog({ params }: { params: { title: string } }) {
               ],
             ]}
             components={{
-              img: ({ node, ...props }) => (
+              img: ({ ...props }) => (
                 <Zoom>
                   <img {...props} style={{ maxWidth: "100%" }} />
                 </Zoom>
