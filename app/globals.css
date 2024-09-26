@@ -12,3 +12,7 @@
     text-decoration: underline;
     color: #D88B4E;
 }
+
+dialog>* {
+    background-color: #212121 !important;
+}

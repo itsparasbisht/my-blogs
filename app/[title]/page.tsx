@@ -6,7 +6,10 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import rehypeSanitize from "rehype-sanitize";
+import rehypeExternalLinks from "rehype-external-links";
 import { Metadata } from "next";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 type Props = {
   params: { title: string };
@@ -51,7 +54,21 @@ export default async function Blog({ params }: { params: { title: string } }) {
           <ReactMarkdown
             className={`${merriweather.className} markdown-container w-full mt-10`}
             remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeRaw, rehypeSanitize]}
+            rehypePlugins={[
+              rehypeRaw,
+              rehypeSanitize,
+              [
+                rehypeExternalLinks,
+                { target: "_blank", rel: "noopener noreferrer" },
+              ],
+            ]}
+            components={{
+              img: ({ node, ...props }) => (
+                <Zoom>
+                  <img {...props} style={{ maxWidth: "100%" }} />
+                </Zoom>
+              ),
+            }}
           >
             {blog[0].body}
           </ReactMarkdown>
