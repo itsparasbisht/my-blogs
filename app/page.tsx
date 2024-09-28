@@ -12,6 +12,7 @@ export default async function Home() {
   const { data: blogs, error } = await supabase
     .from("blogs")
     .select("id, title, created_at, teaser")
+    .order("created_at", { ascending: false })
     .limit(100);
 
   if (error) {
