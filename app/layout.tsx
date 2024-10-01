@@ -15,7 +15,6 @@ export const metadata: Metadata = {
     "interesting blogs",
     "react js developer",
   ],
-  robots: "index, follow",
   authors: [{ name: "Paras Bisht", url: "https://paras-bisht.netlify.app/" }],
   openGraph: {
     title: "Blogs by Paras",
