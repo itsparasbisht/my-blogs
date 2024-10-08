@@ -9,11 +9,14 @@ export const metadata: Metadata = {
   description:
     "I share insights on topics I find interesting and hope they’ll be useful to you too.",
   keywords: [
-    "Paras Bisht",
-    "software developer blog",
-    "frontend developer",
-    "interesting blogs",
+    "paras bisht",
+    "paras bisht blogs",
+    "blogs by paras",
+    "paras bisht portfolio",
+    "frontend developer blogs",
+    "paras bisht javascript",
     "react js developer",
+    "software developer blogs",
   ],
   authors: [{ name: "Paras Bisht", url: "https://paras-bisht.netlify.app/" }],
   openGraph: {

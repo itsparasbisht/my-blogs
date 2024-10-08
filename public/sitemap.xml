@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://blogs-by-paras.netlify.app</loc><lastmod>2024-10-08T15:02:46.209Z</lastmod><changefreq>weekly</changefreq><priority>1</priority></url>
+<url><loc>https://blogs-by-paras.netlify.app/18-what-is-unicode-and-utf-8%3F</loc><lastmod>2024-09-14T06:10:59+00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://blogs-by-paras.netlify.app/14-when-to-use-git-squash-merge%3F</loc><lastmod>2024-09-01T15:14:53+00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://blogs-by-paras.netlify.app/15-understanding-asynchronous-programming-in-node.js</loc><lastmod>2024-08-18T15:02:26+00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://blogs-by-paras.netlify.app/16-the-importance-of-routing-in-single-page-applications-(spas)</loc><lastmod>2024-04-15T15:00:03+00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://blogs-by-paras.netlify.app/17-start-using-tailwind-css</loc><lastmod>2024-03-27T15:00:17+00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+</urlset>

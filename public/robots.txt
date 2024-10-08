@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://blogs-by-paras.netlify.app
+
+# Sitemaps
+Sitemap: https://blogs-by-paras.netlify.app/sitemap.xml
