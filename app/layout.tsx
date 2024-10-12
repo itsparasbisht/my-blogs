@@ -65,7 +65,7 @@ export default function RootLayout({
               Blogs <span className="text-lg font-medium">by Paras</span>
             </h2>
           </Link>
-          <Link href="https://www.linkedin.com/in/paras-bisht" target="_blank">
+          <Link href="https://paras-bisht.netlify.app" target="_blank">
             <Image
               src="/profile.jpg"
               alt="paras profile picture"

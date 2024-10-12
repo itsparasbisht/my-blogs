@@ -10,6 +10,9 @@ export default function MainLayout({
       <main>{children}</main>
       <footer className="mt-12 mb-12">
         <div className="text-[#D88B4E] flex gap-4 underline">
+          <Link href="https://paras-bisht.netlify.app" target="_blank">
+            Website
+          </Link>
           <Link href="https://www.linkedin.com/in/paras-bisht" target="_blank">
             LinkedIn
           </Link>
