@@ -3,16 +3,22 @@
 @tailwind utilities;
 
 @layer utilities {
-    .markdown-container>* {
-        all: revert
-    }
+  .markdown-container > * {
+    all: revert;
+  }
 }
 
 .markdown-container a {
-    text-decoration: underline;
-    color: #D88B4E;
+  text-decoration: underline;
+  color: #d88b4e;
 }
 
-dialog>* {
-    background-color: #212121 !important;
+dialog > * {
+  background-color: #212121 !important;
+}
+
+code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto;
 }

@@ -5,7 +5,6 @@ import { formatDate } from "../utils/formatDate";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
-import rehypeSanitize from "rehype-sanitize";
 import rehypeExternalLinks from "rehype-external-links";
 import { Metadata } from "next";
 import Zoom from "react-medium-image-zoom";
@@ -56,7 +55,6 @@ export default async function Blog({ params }: { params: { title: string } }) {
             remarkPlugins={[remarkGfm]}
             rehypePlugins={[
               rehypeRaw,
-              rehypeSanitize,
               [
                 rehypeExternalLinks,
                 { target: "_blank", rel: "noopener noreferrer" },
@@ -68,6 +66,22 @@ export default async function Blog({ params }: { params: { title: string } }) {
                   <img {...props} style={{ maxWidth: "100%" }} />
                 </Zoom>
               ),
+              video: ({ node, ...props }) => {
+                const { width = "100%", height = "auto", ...rest } = props;
+                return (
+                  <video
+                    {...rest}
+                    controls
+                    style={{
+                      width,
+                      height,
+                      borderRadius: "8px",
+                    }}
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                );
+              },
             }}
           >
             {blog[0].body}
