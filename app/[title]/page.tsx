@@ -66,7 +66,7 @@ export default async function Blog({ params }: { params: { title: string } }) {
                   <img {...props} style={{ maxWidth: "100%" }} />
                 </Zoom>
               ),
-              video: ({ node, ...props }) => {
+              video: ({ ...props }) => {
                 const { width = "100%", height = "auto", ...rest } = props;
                 return (
                   <video
