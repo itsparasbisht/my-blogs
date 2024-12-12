@@ -82,6 +82,28 @@ export default async function Blog({ params }: { params: { title: string } }) {
                   </video>
                 );
               },
+              iframe: ({ ...props }) => (
+                <div
+                  style={{
+                    position: "relative",
+                    width: props.width || "640px",
+                    height: props.height || "360px",
+                    maxWidth: "100%",
+                    margin: "0 auto",
+                  }}
+                >
+                  <iframe
+                    {...props}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      border: "0",
+                    }}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              ),
             }}
           >
             {blog[0].body}
