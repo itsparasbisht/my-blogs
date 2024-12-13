@@ -83,8 +83,9 @@ export default async function Blog({ params }: { params: { title: string } }) {
                 );
               },
               iframe: ({ ...props }) => (
-                <div
+                <span
                   style={{
+                    display: "inline-block",
                     position: "relative",
                     width: props.width || "640px",
                     height: props.height || "360px",
@@ -102,7 +103,7 @@ export default async function Blog({ params }: { params: { title: string } }) {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
-                </div>
+                </span>
               ),
             }}
           >
