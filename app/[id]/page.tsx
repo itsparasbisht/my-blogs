@@ -1,5 +1,4 @@
 import React from "react";
-import { supabase } from "../utils/supabase";
 import { Merriweather } from "next/font/google";
 import { formatDate } from "../utils/formatDate";
 import ReactMarkdown from "react-markdown";
@@ -9,17 +8,19 @@ import rehypeExternalLinks from "rehype-external-links";
 import { Metadata } from "next";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
+import data from "../blogs/data.json";
+import path from "path";
+import fs from "fs";
 
 type Props = {
-  params: { title: string };
+  params: { id: string };
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  let title = decodeURIComponent(params.title);
-  title = title.split("-").splice(1).join(" ");
+  let id = decodeURIComponent(params.id);
 
   return {
-    title: `${title} - Blogs by Paras`,
+    title: `${id} - Blogs by Paras`,
   };
 }
 
@@ -28,22 +29,25 @@ const merriweather = Merriweather({
   subsets: ["latin"],
 });
 
-export default async function Blog({ params }: { params: { title: string } }) {
-  const title = decodeURIComponent(params.title);
-  const id = title.split("-")[0];
+export default async function Blog({ params }: { params: { id: string } }) {
+  const { id } = params;
 
-  const { data: blog, error } = await supabase
-    .from("blogs")
-    .select("title, body, created_at")
-    .eq("id", id);
+  // resolve the markdown file path
+  const filePath = path.join(process.cwd(), "/app/blogs/", `${id}.md`);
+  let blogContent = "";
 
-  if (error) {
-    console.log(error);
+  try {
+    blogContent = fs.readFileSync(filePath, "utf-8");
+  } catch (error) {
+    console.error("error reading file: ", error);
+    blogContent = "Content not found";
   }
+
+  const blog = data.filter((blog) => blog.id === id);
 
   return (
     <section className="text-gray-200">
-      {blog && blog.length > 0 && (
+      {blogContent && (
         <article>
           <h1 className="text-3xl font-bold text-[#D88B4E]">{blog[0].title}</h1>
           <p className={`${merriweather.className} text-gray-400 text-base`}>
@@ -107,7 +111,7 @@ export default async function Blog({ params }: { params: { title: string } }) {
               ),
             }}
           >
-            {blog[0].body}
+            {blogContent}
           </ReactMarkdown>
         </article>
       )}

@@ -1,4 +1,4 @@
-export function formatDate(timestamp: number): string {
+export function formatDate(timestamp: string): string {
   const date = new Date(timestamp);
 
   const day = date.getDate();

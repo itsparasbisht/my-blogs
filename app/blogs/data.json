@@ -1,0 +1,50 @@
+[
+  {
+    "id": "earth-population-visualization",
+    "created_at": "2024-12-13 13:33:05.168889+00",
+    "title": "Earth Population Visualization",
+    "teaser": "1960-2023"
+  },
+  {
+    "id": "useRef-beyond-dom-access",
+    "created_at": "2024-10-28 14:51:45.268936+00",
+    "title": "useRef() - Beyond DOM Access",
+    "teaser": "Persist the reference on re-renders"
+  },
+  {
+    "id": "you-should-know-web-accessibility",
+    "created_at": "2024-10-12 05:41:36.389382+00",
+    "title": "You should know Web Accessibility",
+    "teaser": "Your first steps to accessibility, start here!"
+  },
+  {
+    "id": "what-is-unicode-and-utf-8",
+    "created_at": "2024-09-14 06:10:59+00",
+    "title": "What is Unicode and UTF-8?",
+    "teaser": "UTF-8 is how the world communicates digitally!"
+  },
+  {
+    "id": "when-to-use-git-squash-merge",
+    "created_at": "2024-09-01 15:14:53+00",
+    "title": "When to Use Git Squash Merge?",
+    "teaser": "Tired of your Git history looking like a cluttered to-do list?"
+  },
+  {
+    "id": "understanding-asynchronous-programming-in-nodejs",
+    "created_at": "2024-08-18 15:02:26+00",
+    "title": "Understanding Asynchronous Programming in Node.js",
+    "teaser": "Get a quick reference on Node.js tactics of handling tasks!"
+  },
+  {
+    "id": "the-importance-of-routing-in-single-page-applications",
+    "created_at": "2024-04-15 15:00:03+00",
+    "title": "The Importance of Routing in Single Page Applications (SPAs)",
+    "teaser": "Why use routing in client-side applications when we could just use if statements?"
+  },
+  {
+    "id": "start-using-tailwind-css",
+    "created_at": "2024-03-27 15:00:17+00",
+    "title": "Start using Tailwind CSS",
+    "teaser": "Stop worrying about class names!"
+  }
+]
