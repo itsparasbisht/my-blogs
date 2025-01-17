@@ -17,7 +17,7 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  let id = decodeURIComponent(params.id);
+  const id = decodeURIComponent(params.id);
 
   return {
     title: `${id} - Blogs by Paras`,
