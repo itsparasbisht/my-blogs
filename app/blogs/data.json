@@ -1,5 +1,11 @@
 [
   {
+    "id": "useLayoutEffect-hook-reactjs",
+    "created_at": "2025-02-09 19:30:05",
+    "title": "useLayoutEffect() hook in ReactJS",
+    "teaser": "The pre-paint & post-paint execution"
+  },
+  {
     "id": "earth-population-visualization",
     "created_at": "2024-12-13 13:33:05.168889+00",
     "title": "Earth Population Visualization",
