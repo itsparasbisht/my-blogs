@@ -7,27 +7,33 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Blogs by Paras",
   description:
-    "I share insights on topics I find interesting and hope they’ll be useful to you too.",
+    "Discover practical programming guides, modern web development insights, and expert software tips at Blogs by Paras—your roadmap to mastering tech. Connect with me on LinkedIn to explore software development trends, uncover best practices in programming, and gain the confidence to build impactful projects.",
   keywords: [
+    "how to master React JS",
+    "best JavaScript tutorials for beginners",
     "paras bisht",
     "paras bisht blogs",
     "blogs by paras",
     "paras bisht portfolio",
     "frontend developer blogs",
-    "paras bisht javascript",
     "react js developer",
     "software developer blogs",
+    "frontend developer tutorials",
+    "React developer tips",
+    "coding tutorials for beginners",
   ],
   authors: [{ name: "Paras Bisht", url: "https://paras-bisht.netlify.app/" }],
   openGraph: {
     title: "Blogs by Paras",
+    type: "website",
     description:
-      "I share insights on topics I find interesting and hope they’ll be useful to you too.",
+      "Discover practical programming guides, modern web development insights, and expert software tips at Blogs by Paras—your roadmap to mastering tech. Connect with me on LinkedIn to explore software development trends, uncover best practices in programming, and gain the confidence to build impactful projects.",
     url: "https://blogs-by-paras.netlify.app/",
     siteName: "Blogs by Paras",
     images: [
       {
         url: "https://i.ibb.co/ZLnPzNG/blogs-by-paras.jpg",
+        alt: "Blogs by Paras - Cover Image",
       },
     ],
   },
@@ -35,10 +41,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Blogs by Paras",
     description:
-      "I share insights on topics I find interesting and hope they’ll be useful to you too.",
+      "Discover practical programming guides, modern web development insights, and expert software tips at Blogs by Paras—your roadmap to mastering tech. Connect with me on LinkedIn to explore software development trends, uncover best practices in programming, and gain the confidence to build impactful projects.",
     images: [
       {
         url: "https://i.ibb.co/ZLnPzNG/blogs-by-paras.jpg",
+        alt: "Blogs by Paras - Cover Image",
       },
     ],
   },
@@ -77,6 +84,26 @@ export default function RootLayout({
         </nav>
         {children}
       </body>
+      <footer
+        className={`${montserrat.className} px-5 mb-12 max-w-[720px] m-auto`}
+      >
+        <div className="text-[#D88B4E] flex gap-4 underline">
+          <Link href="https://paras-bisht.netlify.app" target="_blank">
+            Website
+          </Link>
+          <Link href="https://www.linkedin.com/in/paras-bisht" target="_blank">
+            LinkedIn
+          </Link>
+          <Link href="https://github.com/itsparasbisht" target="_blank">
+            GitHub
+          </Link>
+        </div>
+        <Link href="/">
+          <h2 className="text-4xl font-bold text-[#D88B4E] mt-4">
+            Blogs <span className="text-lg font-medium self-end">by Paras</span>
+          </h2>
+        </Link>
+      </footer>
     </html>
   );
 }
