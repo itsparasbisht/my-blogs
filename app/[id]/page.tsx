@@ -48,7 +48,7 @@ export default async function Blog({ params }: { params: { id: string } }) {
   return (
     <section className="text-gray-200">
       {blogContent && (
-        <article>
+        <article className="mb-[50px]">
           <h1 className="text-3xl font-bold text-[#D88B4E]">{blog[0].title}</h1>
           <p className={`${merriweather.className} text-gray-400 text-base`}>
             {formatDate(blog[0].created_at)}

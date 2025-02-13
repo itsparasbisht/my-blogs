@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer utilities {
-  .markdown-container > * {
+  .markdown-container>* {
     all: revert;
   }
 }
@@ -13,7 +13,21 @@
   color: #d88b4e;
 }
 
-dialog > * {
+.markdown-container h1,
+.markdown-container h2,
+.markdown-container h3,
+.markdown-container h4,
+.markdown-container h5 {
+  color: #d88b4e;
+}
+
+.markdown-container pre {
+  background-color: rgb(18, 18, 18);
+  padding: 15px;
+  border-radius: 7px;
+}
+
+dialog>* {
   background-color: #212121 !important;
 }
 

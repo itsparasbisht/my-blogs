@@ -8,16 +8,14 @@ However, `useLayoutEffect()` is a lesser-known hook that many of us have not use
 
 Before diving into the differences between these hooks, it’s important to understand two key concepts: **render** and **repaint**.
 
-- **Render in React:**  
-   The process of generating a virtual description of your UI (via your components) and then reconciling it with the previous description.
-  <br />
+**Render in React:**  
+The process of generating a virtual description of your UI (via your components) and then reconciling it with the previous description.
 
-- **Repaint in the Browser:**  
-   The process where the browser takes the current DOM, calculates the layout, and draws the updated UI on the screen.
-  <br />
+**Repaint in the Browser:**  
+The process where the browser takes the current DOM, calculates the layout, and draws the updated UI on the screen.
 
-- **Not Always a 1:1 Relationship:**  
-  A React render does not always directly cause a repaint. If nothing meaningful has changed, React might not update the DOM, or updates may be batched together before the browser repaints.
+**Not Always a 1:1 Relationship:**  
+A React render does not always directly cause a repaint. If nothing meaningful has changed, React might not update the DOM, or updates may be batched together before the browser repaints.
 
 ---
 
@@ -285,8 +283,9 @@ const movedBoxStyle = {
 
 ## Conclusion
 
-- **`useLayoutEffect`** is ideal for synchronously updating the DOM before the browser paints, ensuring a smooth UI without visual flicker.
-- **`useEffect`** is best for side effects that can run after the UI has been rendered, keeping the initial paint fast.
+`useLayoutEffect` is ideal for synchronously updating the DOM before the browser paints, ensuring a smooth UI without visual flicker.
+
+`useEffect` is best for side effects that can run after the UI has been rendered, keeping the initial paint fast.
 
 Choose the appropriate hook based on your performance and UI update needs.
 
